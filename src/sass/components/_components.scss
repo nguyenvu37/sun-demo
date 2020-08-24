@@ -1,0 +1,43 @@
+.logo {
+    display: flex;
+    position: relative;
+
+    .logo-square {
+        position: relative;
+        width: 55px;
+        height: 55px;
+        background: #789629;
+        border-radius: 50%;
+    }
+    
+    .logo-img {
+        position: absolute;
+        left: 0;
+        padding: 10px 5px;
+    }
+}
+
+.price {
+    font-family:  'Lobster', cursive;
+    position: relative;
+    color: $green;
+    font-size: 14px;
+    font-weight: 500;
+
+    small {
+        position: absolute;
+        top: 0;
+    }
+}
+
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 10px solid $green;
+    position: fixed;
+    top: 75px;
+    margin-left: 30px;
+    display: none;
+}

@@ -1,0 +1,15 @@
+@mixin  font-a($cl, $s, $fw:700) {
+    color: $cl;
+    font-size: $s;
+    font-weight: $fw;
+}
+
+@mixin button($bg, $s, $pd) {
+    background: $bg;
+    color: #fff;
+    font-size: $s;
+    padding: $pd;
+    outline: none;
+    cursor: pointer;
+    border: none;
+}

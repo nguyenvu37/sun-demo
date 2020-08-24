@@ -1,1 +1,39 @@
+include variables
+include mixin
+
 header
+    .box
+        .nav
+            .nav__logo.logo
+                .nav__logo--square.logo-square
+                img.logo-img(src="../../../assets/img/home/mandala.png")
+            .nav__menu
+                ul
+                    each menu in listMenu
+                        li(class=menu.className)
+                            a(href=menu.link)
+                                | #{menu.content}
+                                i(class=menu.i)
+                                if menu.dropdown
+                                    .arrow-up
+                                    .dropdown-list
+                                        each item in menu.dropdown
+                                            ul
+                                                .list-name= item.ul
+                                                each list in item.li
+                                                    li
+                                                        a(href="#") #{list}
+            .nav__cart
+                i.fas.fa-search.search
+                i.fas.fa-shopping-cart.cart
+                    .arrow-up
+                    .nav__cart__info
+                        +product-cart('../../assets/img/home/img3.jpg')
+                        +product-cart('../../assets/img/home/img3.jpg')
+                        .nav__cart__info__total
+                            p Tổng số
+                            span.price 240.000
+                                small đ
+                            col
+                        .nav__cart__info__btn
+                            button(type="button") GIỎ HÀNG
